@@ -2,14 +2,13 @@
 import ResponsiveToggle from './ResponsiveToggle.astro'
 import { DarkMode } from 'accessible-astro-components'
 import { Image } from "astro:assets"
-import logo from "../assets/img/logo.svg"
+import logo from "../assets/img/N__3_-removebg-preview.png"
 ---
 
 <div id="main-navigation" class="is-desktop py-8">
   <div class="container">
     <a href="/" class="flex items-center gap-2 !no-underline">
-      <Image src={logo} alt="Your Logo" width="47" height="37" />
-      <span class="font-bold">Accessible Astro</span>
+      <Image src={logo} alt="Your Logo" width="150" height="200" />
     </a>
     <div class="wrapper">
       <nav class="desktop-menu" aria-label="Main navigation desktop">
@@ -36,6 +35,7 @@ import logo from "../assets/img/logo.svg"
 
   // functions
   const setActiveMenuItem = () => {
+
     const mobileDesktopMenus = mainNav.querySelectorAll('nav > ul')
     const currenPathname = window.location.pathname
 
@@ -43,10 +43,10 @@ import logo from "../assets/img/logo.svg"
       const menuItems = [...menu.querySelectorAll('a:not([rel*="external"])')] as HTMLAnchorElement[]
 
       menuItems.forEach((menuItem) => {
-        if (currenPathname.includes(menuItem.pathname.replaceAll('/', '')) && menuItem.textContent !== 'Home') {
+        if (currenPathname.includes(menuItem.pathname.replaceAll('/', '')) && menuItem.textContent !== 'Inicio') {
           menuItem.classList.add('is-active')
           menuItem.setAttribute('aria-current', 'page')
-        } else if (menuItem.textContent === 'Home' && currenPathname === '/') {
+        } else if (menuItem.textContent === 'Inicio' && currenPathname === '/') {
           menuItem.classList.add('is-active')
           menuItem.setAttribute('aria-current', 'page')
         }

@@ -1,0 +1,57 @@
+---
+import Icon from 'astro-icon'
+import { Image } from 'astro:assets'
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import ContentMedia from '../components/ContentMedia.astro'
+import Perfil from '../components/perfil.astro'
+import Navigation from '../components/Navigation.astro'
+---
+
+<DefaultLayout title="Proyectos">
+  <ContentMedia imgSrc="/src/assets/img/alma.jpeg">
+    <h2>Alma y Destino</h2>
+    <p class="text-2xl">
+      Alma y Destino fue mi primera web, diseñada para servicios holísticos, desarrollada en HTML5 Y CSS3.
+    </p>
+    <a href="http://almaydestino.com"
+      ><button
+        type="button"
+        class="mb-2 me-2 rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >Ver Sitio</button
+      ></a
+    >
+  </ContentMedia>
+  <ContentMedia imgSrc="/src/assets/img/poder.jpeg" reverseImg={true}>
+    <h2>Poder Interior</h2>
+    <p class="text-2xl">
+      Using semantic HTML, landmarks, skip links, screen reader friendly content, aria-labels, keyboard accessible
+      navigation and components, clear outlines and tab indicators and the right color contrast, you're more certain of
+      reaching WCAG AA compliance.
+    </p>
+    <a href="http://poderinterior.com.ar"
+      ><button
+        type="button"
+        class="mb-2 me-2 rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >Ver Sitio</button
+      ></a
+    >
+  </ContentMedia>
+
+  <ContentMedia imgSrc="/src/assets/img/hoteldelsolar.jpeg">
+    <h2>Hotel Del Solar</h2>
+    <p class="text-2xl">
+      Desarrollé una página web para el Hotel Del Solar de Pehuajó, utilizando la plataforma de Wordpress. La página
+      presenta un diseño atractivo y funcional, reflejando la identidad y servicios del hotel de manera efectiva. Está
+      organizada en dos secciones.
+    </p>
+    <a href="http://hoteldelsolar.com.ar"
+      ><button
+        type="button"
+        class="mb-2 me-2 rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >Ver Sitio</button
+      ></a
+    >
+  </ContentMedia>
+</DefaultLayout>
+
+
